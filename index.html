@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Builder</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="logo"><a href="/index.html">Resume Builder</a></h1>
+            <!-- <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul> -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar collapse" id="sidebar">
+            <ul id="menu">
+                <li class="active nav__link nav__link-1">
+                    <a href="#Contact"><i class="fas fa-phone"><span class="tooltip">Contact</span></i>
+                    </a>
+                </li>
+                <li class="nav__link nav__link-2">
+                    <a href="#Education"><i class="fas fa-user-graduate"><span class="tooltip">Education</span></i>
+                    </a>
+                </li>
+                <li class="nav__link nav__link-3">
+                    <a href="#WorkExperience">
+                        <i class="fas fa-copy"><span class="tooltip">Work
+                                Experience</span></i>
+                    </a>
+                </li>
+                <li class="nav__link nav__link-4">
+                    <a href="#Projects"><i class="fas fa-tv"><span class="tooltip">Projects</span></i>
+                    </a>
+                </li>
+                <li class="nav__link nav__link-5">
+                    <a href="#Skills"><i class="fas fa-star"><span class="tooltip">Skills</span></i>
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#CareerObjective"><i class="fas fa-book"><span class="tooltip">Career
+                                Objective</span></i>
+                    </a>
+                </li>
+            </ul>
+            <i class="fas fa-caret-right collapse-icon" id="collapseIcon1"></i>
+            <!-- <i class="fas fa-caret-right collapse-icon remove" id="collapseIcon2"></i> -->
+        </div>
+        <div class="main-container collapse" id="mainContainer">
+            <!-- <form id="form"> -->
+            <div class="section section-1" id="Contact">
+                <h1>Let's start with your <strong>header</strong></h1>
+                <p>Include your full name and at least one way for employers to contact you</p>
+                <div class="contact-form">
+                    <div class="inputs">
+                        <input type="text" class="name" id="name" onkeyup="this.setAttribute('value', this.value);"
+                            value="">
+                        <label class="label">Name</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" class="email" onkeyup="this.setAttribute('value', this.value);" value=""
+                            id="email">
+                        <label class="label">Email</label>
+                    </div>
+                    <div class="inputs" style="width: 95%;">
+                        <input type="text" class="jobtitle" onkeyup="this.setAttribute('value', this.value);" value=""
+                            id="jobtitle">
+                        <label class="label">Job title</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="number" class="phNumber" onkeyup="this.setAttribute('value', this.value);" value=""
+                            id="phNumber">
+                        <label class="label">Phone Number</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" class="location" onkeyup="this.setAttribute('value', this.value);" value=""
+                            id="location">
+                        <label class="label">Location(Optional)</label>
+                    </div>
+                </div>
+                <div class="continue-btn" data-tab="1">Continue</div>
+            </div>
+            <div class="section section-1 non-active" id="Education">
+                <h1>Add your<strong> education</strong></h1>
+                <p>Start with your most recent job first. You can also add voluntary work,
+                    internships or extracurricular activities.</p>
+                <form id="edu_form">
+                    <div class="contact-form">
+                        <div class="inputs">
+                            <input type="text" class="uniname" id="uniname" name="uniname"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">University Name</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="unicity" name="unicity"
+                                onkeyup="this.setAttribute('value', this.value);" value="" id="unicity">
+                            <label class="label">City</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="degree" id="degree" name="degree"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">Degree</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="stream" id="stream" name="stream"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">Feild of Stufy</label>
+                        </div>
+                        <div class="date-inputs">
+                            <label class="date-label">Start Date</label>
+                            <input type="date" class="startDate" name="unistartDate"
+                                onkeyup="this.setAttribute('value', this.value);" value="" id="unistartDate">
+                        </div>
+                        <div class="date-inputs">
+                            <label class="date-label">End Date</label>
+                            <input type="date" class="endDate" name="uniendDate"
+                                onkeyup="this.setAttribute('value', this.value);" value="" id="uniendDate">
+                        </div>
+                    </div>
+                    <button type="submit" class="continue">Continue</button>
+                </form>
+                <div class="education-container"></div>
+            </div>
+            <div class="section section-2 non-active" id="WorkExperience">
+                <h1>Add your<strong> experience</strong></h1>
+                <p>Start with your most recent job first. You can also add voluntary work,
+                    internships or extracurricular activities.</p>
+                <form id="exp_form">
+                    <div class="contact-form">
+                        <div class="inputs">
+                            <input type="text" class="jobtitle" name="jobtitle"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">Job title</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="employer" name="employer"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">Employer</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="city" onkeyup="this.setAttribute('value', this.value);" value=""
+                                name="city">
+                            <label class="label">City</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" class="country" id="country" name="country"
+                                onkeyup="this.setAttribute('value', this.value);" value="">
+                            <label class="label">Country</label>
+                        </div>
+                        <div class="date-inputs">
+                            <label class="date-label">Start Date</label>
+                            <input type="date" class="startDate" onkeyup="this.setAttribute('value', this.value);"
+                                value="" name="eduStartDate">
+                        </div>
+                        <div class="date-inputs">
+                            <label class="date-label">End Date</label>
+                            <input type="date" class="endDate" onkeyup="this.setAttribute('value', this.value);"
+                                value="" name="eduEndDate">
+                        </div>
+                    </div>
+                    <button type="submit" class="continue exp-continue">Continue</button>
+                </form>
+                <div class="experience-container"></div>
+            </div>
+            <div class="section section-3 non-active" id="Projects">
+                <h1>Add your<strong> projects</strong></h1>
+                <p>Start with your most recent job first. You can also add voluntary work,
+                    internships or extracurricular activities.</p>
+                <div class="contact-form">
+                    <div class="inputs">
+                        <input type="text" class="title" id="projectTitle"
+                            onkeyup="this.setAttribute('value', this.value);" value="">
+                        <label class="label" required>Title</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" class="role" onkeyup="this.setAttribute('value', this.value);" value=""
+                            id="role">
+                        <label class="label">Role(Optional)</label>
+                    </div>
+                    <div class="inputs" style="width: 95%;">
+                        <input type="text" class="responsibilities" id="responsibilities"
+                            onkeyup="this.setAttribute('value', this.value);" value="">
+                        <label class="label">Responsibilities</label>
+                    </div>
+                    <div class="date-inputs">
+                        <label class="date-label">Start Date</label>
+                        <input type="date" class="projectStartDate" onkeyup="this.setAttribute('value', this.value);"
+                            value="" id="projectStartDate">
+                    </div>
+                    <div class="date-inputs">
+                        <label class="date-label">End Date</label>
+                        <input type="date" class="ProjectEndDate" onkeyup="this.setAttribute('value', this.value);"
+                            value="" id="ProjectEndDate">
+                    </div>
+                </div>
+            </div>
+            <div class="section section-4 non-active" id="Skills">
+                <h1>Add your<strong> skills</strong></h1>
+                <p>Start with your most recent job first. You can also add voluntary work,
+                    internships or extracurricular activities.</p>
+                <div class="select-wrapper">
+                    <div class="custom-select" onclick="toggleOptions()">
+                        <span id="selected-options">Select Options</span>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="options-container" id="options-container">
+                        <div class="option" onclick="selectOption(this)">Option 1</div>
+                        <div class="option" onclick="selectOption(this)">Option 2</div>
+                        <div class="option" onclick="selectOption(this)">Option 3</div>
+                        <!-- Add more options as needed -->
+                    </div>
+                </div>
+                <div class="seleced-options">
+                    <div class="skill">Java</div>
+                    <div class="skill">MYSQL</div>
+                </div>
+            </div>
+            <div class="section section-5 non-active" id="CareerObjective">
+                <h1>Add your<strong> Career Objective</strong></h1>
+                <p>Start with your most recent job first. You can also add voluntary work,
+                    internships or extracurricular activities.</p>
+                <div class="contact-form">
+                    <div class="inputs" style="width: 100%;">
+                        <input type="text" class="summary" id="summary"
+                            onkeyup="this.setAttribute('value', this.value);" value="">
+                        <label class="label">Summary</label>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="btn-control">
+                    <button class="back" disabled>BACK</button>
+                    <button class="next">NEXT</button>
+                </div> -->
+            <!-- </form> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="dropdown.js"></script> -->
+</body>
+
+</html>
